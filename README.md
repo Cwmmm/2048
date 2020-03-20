@@ -1,4 +1,8 @@
-## a simple webpack template
-  * 打包
-  * 调试
-  * 指定模板
+## 2048 小游戏
+finished：
+  * 主程序
+unfinished：
+  * 界面美化
+  * 可切换(4\*4,5\*5,6\*6)
+  * 分数
+  * 排行榜

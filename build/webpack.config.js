@@ -7,6 +7,18 @@ module.exports={
   output:{
     filename:'main.js'
   },
+  module:{
+    rules:[{
+      test:/\.less$/,
+      use: [{
+        loader: "style-loader" 
+        },{
+            loader: "css-loader" 
+        },{
+            loader: "less-loader"
+        }]
+        }]
+  },
   devtool:process.env.NODE_ENV==='production'?false:'inline-source-map',
   devServer:{
     contentBase:'./dist',
@@ -17,7 +29,6 @@ module.exports={
       cleanOnceBeforeBuildPatterns:['./dist']
     }),
     new HtmlWebpackPlugin({
-      title:'app',
       template:'src/template/h5_header.html'
     })
   ]
